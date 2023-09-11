@@ -82,7 +82,9 @@ jobs:
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ env.NETLIFY_SITE_ID }}
-          
+          install_command: pnpm i
+          build_command: pnpm run build
+
       # - name: Install vercel cli
       #   run: pnpm i -g vercel@latest
 
