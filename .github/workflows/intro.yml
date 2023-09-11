@@ -1,6 +1,8 @@
 name: Intro to Github Actions
 
 env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
   NAME: "John Doe"
 
 # When does this workflow run
@@ -34,7 +36,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Build
+      - name: Install
         run: pnpm install
 
       - name: Build
@@ -47,3 +49,22 @@ jobs:
 
       - name: Curl the server
         run: curl -I http://localhost:4173
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-test
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install vercel cli
+        run: npm i -g vercel@latest
+
+      - name: Get vercel environnement
+        run: vercel pull --yes --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build Project Artifacts
+        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy Project Artifacts to Vercel
+        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
