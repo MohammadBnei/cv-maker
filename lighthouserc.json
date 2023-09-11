@@ -4,7 +4,8 @@
       "staticDistDir": "build"
     },
     "upload" : {
-      "target" : "temporary-public-storage"
+      "target" : "temporary-public-storage",
+      "outputDir" : "./lhci_reports"
     }
   }
 }
