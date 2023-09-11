@@ -1,5 +1,7 @@
 
 
+## [0.8.1](https://github.com/ChrisBradford2/exo-cicd/compare/0.8.0...0.8.1) (2023-09-11)
+
 # 0.8.0 (2023-09-11)
 
 
