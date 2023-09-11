@@ -46,11 +46,11 @@ jobs:
         run: |
               pnpm run preview &
               sleep 5
-              curl -I http://localhost:4174
+              curl -I http://localhost:4173
 
-      - name: Notify
-        if: failure()
-        run: echo fail
+      # - name: Notify
+      #   if: failure()
+      #   run: echo fail
 
   deploy:
     runs-on: ubuntu-latest
@@ -81,15 +81,12 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Install Vercel CLI
-        run: npm install --global vercel@latest
-
-      - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
-
-      - name: Build Project Artifacts
-        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
-
-      - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Netlify Deploy
+        uses: jsmrcaga/action-netlify-deploy@v2.0.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          build_command: pnpm run build
+          install_command: pnpm install
+    
 
