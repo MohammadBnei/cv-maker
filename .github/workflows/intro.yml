@@ -27,3 +27,9 @@ jobs:
         run: |
           npm install -g @lhci/cli@0.12.x
           lhci autorun
+      # Archive the generated Lighthouse HTML report as an artifact
+      - name: Archive Lighthouse report
+        uses: actions/upload-artifact@v2
+        with:
+          name: lighthouse-report
+          path: ./lighthouse-report
