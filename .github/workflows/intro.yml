@@ -3,6 +3,8 @@ name: Intro to Github Actions
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  NETLIFY_SITE_ID: 3ac00091-2633-469e-86c6-1a0efb4bbcfe
+  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
   NAME: "John Doe"
 
 # When does this workflow run
@@ -76,14 +78,19 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Install vercel cli
-        run: pnpm i -g vercel@latest
+      - uses: jsmrcaga/action-netlify-deploy@v2.0.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ env.NETLIFY_SITE_ID }}
+          
+      # - name: Install vercel cli
+      #   run: pnpm i -g vercel@latest
 
-      - name: Get vercel environnement
-        run: vercel pull --yes --token=${{ secrets.VERCEL_TOKEN }}
+      # - name: Get vercel environnement
+      #   run: vercel pull --yes --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Build Project Artifacts
-        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+      # - name: Build Project Artifacts
+      #   run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+      # - name: Deploy Project Artifacts to Vercel
+      #   run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
