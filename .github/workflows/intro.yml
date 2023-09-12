@@ -5,7 +5,7 @@ env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
   NETLIFY_SITE_ID: 3ac00091-2633-469e-86c6-1a0efb4bbcfe
   NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-  NAME: "John Doe"
+  NAME: 'John Doe'
 
 # When does this workflow run
 on:
@@ -52,12 +52,72 @@ jobs:
       - name: Curl the server
         run: curl -I http://localhost:4173
 
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.4.0
+        with:
+          version: 8
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install
+        run: pnpm install
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Run the server
+        run: |
+          pnpm run preview --host &
+          sleep 5
+
+      - name: Curl the server
+        run: curl -I http://localhost:4173
+
+      - name: Take a snapshot
+        run: |
+          mkdir -m 777 gen
+          docker run -i --init --cap-add=SYS_ADMIN --network host -v ./gen:/home/pptruser/gen ghcr.io/puppeteer/puppeteer:latest node -e "$(cat snapshot.js)" http://127.0.0.1:4173 ./gen
+          sed -i 's/http:\/\/localhost:4173/https:\/\/cv.bnei.dev/g' ./gen/*
+
+          mv gen/* static/
+
+      - name: git config
+        run: |
+          git config --global user.name "Github Action CI"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: git commit
+        run: |
+          git add static
+          git commit -m "Snapshot ${{ github.sha }}"
+          git push
+
   deploy:
     runs-on: ubuntu-latest
     needs: build-test
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref }}
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.4.0
