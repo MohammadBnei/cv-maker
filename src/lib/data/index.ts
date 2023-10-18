@@ -32,7 +32,7 @@ export const contactInfo: IContactInfo = {
 
 export const skills: ISkill[] = [
 	{
-		name: 'golang',
+		name: 'Php',
 		category: 'backend'
 	},
 	{
@@ -44,7 +44,7 @@ export const skills: ISkill[] = [
 		category: 'frontend'
 	},
 	{
-		name: 'sveltekit',
+		name: 'Vuejs',
 		category: 'frontend'
 	},
 	{
@@ -56,15 +56,15 @@ export const skills: ISkill[] = [
 		category: 'data'
 	},
 	{
-		name: 'kubernetes',
-		category: 'devops'
-	},
-	{
 		name: 'docker',
 		category: 'devops'
 	},
 	{
-		name: 'gcp',
+		name: 'kubernetes',
+		category: 'devops'
+	},
+	{
+		name: 'Mac OS',
 		category: 'system'
 	},
 	{

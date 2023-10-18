@@ -222,19 +222,19 @@ export const experience: IExperience[] = [
 		]
 	},
 	{
-		enterprise: 'Voc On Steroid',
-		position: 'Entrepreneur',
-		startDate: new Date('2020-09-01'),
-		endDate: new Date('2030-07-01'),
-		description: `Création d'une application permettant d'enrichir son vocabulaire en apprenant de nouveaux mots.  <a href="https://voconsteroid.com" class="link ml-4"><img src="https://voconsteroid.com/voconsteroidLogoNT384.png" alt="voconsteroid" class="inline w-10" /> voconsteroid.com</a>`,
+		enterprise: 'FDV Partner',
+		position: 'Support Informatique',
+		startDate: new Date('2019-12-01'),
+		endDate: new Date('2020-02-01'),
+		description: `FDV Partner,spécialiste des ventes BtoB complexes en France et à l’étranger`,
 		missions: [
 			{
-				title: 'Architecture',
-				description: `Création de l'architecture du projet.`,
+				title: 'Développement',
+				description: `Création Site pour la gestion des Clients`,
 				skills: [
-					{ name: 'microservices', category: 'devops' },
-					{ name: 'gcp', category: 'system' },
-					{ name: 'bare metal', category: 'system' }
+					{ name: 'php', category: 'backend' },
+					{ name: 'html', category: 'frontend' },
+					{ name: 'css', category: 'frontend' }
 				],
 				snapshot: true
 			},
