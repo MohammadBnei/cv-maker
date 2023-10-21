@@ -1,0 +1,13 @@
+version: '3'
+services:
+  app:
+    image: node:14   # Utilisez l'image Node.js souhaitée
+    container_name: mon_app_node   # Remplacez "mon_app_node" par un nom de conteneur de votre choix
+    working_dir: /app
+    volumes:
+      - .:/app   # Montez le répertoire de votre application dans le conteneur
+    ports:
+      - "3000:3000"   # Mappez le port de l'application
+    environment:
+      - NODE_ENV=production   # Définissez des variables d'environnement si nécessaire
+    command: npm start
