@@ -3,6 +3,11 @@ import type { ILang } from '$lib/component/lang.svelte';
 
 export const langs: ILang[] = [
 	{
+		name: 'Chinois',
+		codes:['cn'],
+		comment: 'Langue Maternelle'
+	},
+	{
 		name: 'français',
 		codes: [
 			'bi',
@@ -44,7 +49,7 @@ export const langs: ILang[] = [
 			'wf',
 			'yt'
 		],
-		comment: 'Langue maternelle'
+		comment: 'Bilangue'
 	},
 	{
 		name: 'anglais',
@@ -107,24 +112,24 @@ export const langs: ILang[] = [
 			'zm',
 			'zw'
 		],
-		comment: 'bilingue'
-	},
-	{
-		name: 'persian',
-		codes: ['af', 'ir', 'tj'],
-		comment: 'parlé'
+		comment: 'Parlé'
 	}
 ];
 
 export const hobbies: IHobby[] = [
 	{
-		name: 'boxe',
-		comment: 'anglaise & thaïlandaise',
-		svg: '/boxing-glove.svg'
+		name: 'Basket',
+		comment: 'Club pendant 3 ans',
+		svg: '/basketball.svg'
 	},
 	{
-		name: 'lecture',
-		comment: 'Weber, Maupassant',
-		svg: '/reading.svg'
+		name: 'Voyage',
+		comment: 'Chine, Italie, Espagne, Angleterre, Suisse, Andorre',
+		svg: '/travel.svg'
+	},
+	{
+		name: 'Musculation',
+		comment: 'En Pause temps en temps :)',
+		svg: '/muscle.svg'
 	}
 ];

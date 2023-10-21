@@ -12,23 +12,19 @@ export const title: ITitle = {
 };
 
 export const contactInfo: IContactInfo = {
-	name: 'Mohammad-Amine BANAEI',
-	nationality: 'French Nationality',
-	phone: '+33 6 61 93 90 82',
-	email: 'mohammadamine.banaei@pm.me',
+	name: 'Chaochao Zhou',
+	nationality: 'Chinese Nationality',
+	phone: '+33 7 81 85 80 18',
+	email: 'chaochao.zhou@hotmail.com',
 	links: [
 		{
-			url: 'https://bnei.dev',
-			type: 'other'
-		},
-		{
 			name: 'Github',
-			url: 'https://github.com/mohammadbnei',
+			url: 'https://github.com/Chaochao-z',
 			type: 'github'
 		},
 		{
 			name: 'LinkedIn',
-			url: 'https://www.linkedin.com/in/mbnei',
+			url: 'https://www.linkedin.com/in/chaochao-zhou-9a593b199/',
 			type: 'linkedin'
 		}
 	]

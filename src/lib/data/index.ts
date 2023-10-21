@@ -12,23 +12,19 @@ export const title: ITitle = {
 };
 
 export const contactInfo: IContactInfo = {
-	name: 'Mohammad-Amine BANAEI',
-	nationality: 'Nationalité Française',
-	phone: '+33 6 61 93 90 82',
-	email: 'mohammadamine.banaei@pm.me',
+	name: 'Chaochao Zhou',
+	nationality: 'Nationalité Chinoise',
+	phone: '+33 7 81 85 80 18',
+	email: 'chaochao.zhou@hotmail.com',
 	links: [
 		{
-			url: 'https://bnei.dev',
-			type: 'other'
-		},
-		{
 			name: 'Github',
-			url: 'https://github.com/mohammadbnei',
+			url: 'https://github.com/Chaochao-z',
 			type: 'github'
 		},
 		{
 			name: 'LinkedIn',
-			url: 'https://www.linkedin.com/in/mbnei',
+			url: 'https://www.linkedin.com/in/chaochao-zhou-9a593b199/',
 			type: 'linkedin'
 		}
 	]
@@ -36,7 +32,7 @@ export const contactInfo: IContactInfo = {
 
 export const skills: ISkill[] = [
 	{
-		name: 'golang',
+		name: 'Php',
 		category: 'backend'
 	},
 	{
@@ -48,7 +44,7 @@ export const skills: ISkill[] = [
 		category: 'frontend'
 	},
 	{
-		name: 'sveltekit',
+		name: 'Vuejs',
 		category: 'frontend'
 	},
 	{
@@ -60,15 +56,15 @@ export const skills: ISkill[] = [
 		category: 'data'
 	},
 	{
-		name: 'kubernetes',
-		category: 'devops'
-	},
-	{
 		name: 'docker',
 		category: 'devops'
 	},
 	{
-		name: 'gcp',
+		name: 'kubernetes',
+		category: 'devops'
+	},
+	{
+		name: 'Mac OS',
 		category: 'system'
 	},
 	{
