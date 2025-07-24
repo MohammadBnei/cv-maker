@@ -6,7 +6,7 @@ export const experience: IExperience[] = [
     "position": "Développeur Golang",
     "startDate": new Date("2024-08-26"),
     "endDate": new Date("2025-03-24"),
-    "description": "Développement d'un système de réservation de voyages, incluant des services d'ingestion de données, de monitoring des requêtes et l'automatisation des déploiements d'infrastructure.",
+    "description": "Développement du système de réservation de voyages de PerfectStay, incluant des services d'ingestion de données, de monitoring des requêtes et l'automatisation des déploiements d'infrastructure.",
     "missions": [
       {
         "title": "Service de Monitoring des Requêtes",
@@ -107,7 +107,7 @@ export const experience: IExperience[] = [
     "position": "Conférencier",
     "startDate": new Date("2021-09-01"),
     "endDate": new Date("2024-02-01"),
-    "description": "Conception et animation de cours orientés projets sur les technologies web modernes pour les étudiants de Master, avec un focus sur le développement Backend, l'architecture Microservices et les pratiques DevOps.",
+    "description": "Conception et auation de cours orientés projets de PerfectStay sur les technologies web modernes pour les étudiants de Master, avec un focus sur le développement Backend, l'architecture Microservices et les pratiques DevOps.",
     "missions": [
       {
         "title": "Architecture Microservices",
@@ -214,7 +214,7 @@ export const experience: IExperience[] = [
     "enterprise": "Fastory",
     "startDate": new Date("2021-01-01"),
     "endDate": new Date("2021-07-01"),
-    "description": "Participation au développement d'une plateforme de création de micro-sites avec chatbots, concours et tableaux de bord analytiques, avec un accent sur le développement backend et le traitement des données en temps réel.",
+    "description": "Participation auéveloppement d'une plateforme de création de PerfectStay de micro-sites avec chatbots, concours et tableaux de bord analytiques, avec un accent sur le développement backend et le traitement des données en temps réel.",
     "position": "Développeur Web",
     "missions": [
       {
@@ -406,7 +406,7 @@ export const experience: IExperience[] = [
     "position": "Développeur Web",
     "startDate": new Date("2019-09-01"),
     "endDate": new Date("2020-12-01"),
-    "description": "Participation au développement et à la maintenance de la plateforme Studio de Gymglish, une plateforme de création de cours, avec un accent sur l'optimisation des performances et le développement backend.",
+    "description": "Participation auéveloppement et à la maintenance de de PerfectStay la plateforme Studio de Gymglish, une plateforme de création de cours, avec un accent sur l'optimisation des performances et le développement backend.",
     "missions": [
       {
         "title": "Implémentation de Fonctionnalités et Création de Champs",
@@ -476,7 +476,7 @@ export const experience: IExperience[] = [
     "position": "Développeur Web - Stage",
     "startDate": new Date("2018-04-01"),
     "endDate": new Date("2018-07-01"),
-    "description": "Participation au développement d'un système CRM (Customer Relationship Management), avec un accent sur la logique backend et la conception d'algorithmes.",
+    "description": "Participation auéveloppement d'un système CRM (Customer de PerfectStay Relationship Management), avec un accent sur la logique backend et la conception d'algorithmes.",
     "missions": [
       {
         "title": "Gestion de la Relation Utilisateur",
@@ -495,7 +495,7 @@ export const experience: IExperience[] = [
     "position": "Développeur Web",
     "startDate": new Date("2016-09-01"),
     "endDate": new Date("2017-07-01"),
-    "description": "Participation au développement backend de systèmes gouvernementaux, acquérant de l'expérience en Java J2EE et en gestion de bases de données.",
+    "description": "Participation auéveloppement backend de systèmes gouvernementaux, de PerfectStay acquérant de l'expérience en Java J2EE et en gestion de bases de données.",
     "missions": [
       {
         "title": "Développement du Système Si-LAV",
