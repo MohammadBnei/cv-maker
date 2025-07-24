@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.14.2](https://github.com/MohammadBnei/cv-maker/compare/0.14.1...0.14.2) (2025-07-24)
+
+
+### Bug Fixes
+
+* Make PerfectStay job description more concise ([e033b0d](https://github.com/MohammadBnei/cv-maker/commit/e033b0d765dee5c53879435b77eb3c3202825b29))
+
 ## [0.14.1](https://github.com/MohammadBnei/cv-maker/compare/0.14.0...0.14.1) (2025-07-24)
 
 
