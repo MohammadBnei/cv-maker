@@ -6,7 +6,7 @@ export const experience: IExperience[] = [
     "position": "Développeur Golang",
     "startDate": new Date("2024-08-26"),
     "endDate": new Date("2025-03-24"),
-    "description": "PerfectStay est une agence de voyage opérant en B2B2C, offrant un système complet de réservation de voyages (vols, hôtels, transports, activités).",
+    "description": "En tant que Développeur Golang chez PerfectStay, une agence de voyage B2B2C, j'ai contribué au développement d'un système complet de réservation de voyages. Mes responsabilités incluaient la création de services d'ingestion de données, la mise en œuvre de la surveillance des requêtes et l'automatisation des déploiements d'infrastructure.",
     "missions": [
       {
         "title": "Service de Monitoring des Requêtes",
@@ -499,7 +499,7 @@ export const experience: IExperience[] = [
     "missions": [
       {
         "title": "Développement du Système Si-LAV",
-        "description": "Participation au développement backend du système Si-LAV en utilisant Java J2EE, avec un accent sur la gestion des données et l'intégration d'API.",
+        "description": "Participation au backend du système Si-LAV en utilisant Java J2EE, avec un accent sur la gestion des données et l'intégration d'API.",
         "skills": [
           {
             "name": "java j2e",
