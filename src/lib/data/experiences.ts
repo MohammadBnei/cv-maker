@@ -6,7 +6,7 @@ export const experience: IExperience[] = [
     "position": "Développeur Golang",
     "startDate": new Date("2024-08-26"),
     "endDate": new Date("2025-03-24"),
-    "description": "En tant que Développeur Golang chez PerfectStay, une agence de voyage B2B2C, j'ai contribué au développement d'un système complet de réservation de voyages. Mes responsabilités incluaient la création de services d'ingestion de données, la mise en œuvre de la surveillance des requêtes et l'automatisation des déploiements d'infrastructure.",
+    "description": "Développement d'un système de réservation de voyages, incluant des services d'ingestion de données, de monitoring des requêtes et l'automatisation des déploiements d'infrastructure.",
     "missions": [
       {
         "title": "Service de Monitoring des Requêtes",
