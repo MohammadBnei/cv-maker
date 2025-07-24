@@ -64,6 +64,7 @@ export const experience: IExperience[] = [
 					},
 					{
 						"name": "aws lambda",
+						"category": "devops"
 					},
 					{
 						"name": "aws ecr",

@@ -1,4 +1,3 @@
-// Filename : langHobbies.ts
 import type { IHobby } from '$lib/component/hobby.svelte';
 import type { ILang } from '$lib/component/lang.svelte';
 
