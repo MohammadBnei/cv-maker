@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.14.1](https://github.com/MohammadBnei/cv-maker/compare/0.14.0...0.14.1) (2025-07-24)
+
+
+### Bug Fixes
+
+* Update PerfectStay job description in experience data ([e455dd8](https://github.com/MohammadBnei/cv-maker/commit/e455dd890dc5b8b702a0d465b58f3facd3a57620))
+
 # [0.14.0](https://github.com/MohammadBnei/cv-maker/compare/0.13.0...0.14.0) (2025-04-15)
 
 
